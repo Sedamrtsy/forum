@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">FORUS</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Type here to search...">
+                <div class="search-icon"></div>
+            </div>
+            <div class="header-buttons">
+                {{if .LoggedIn}}
+                <form action="/upload" method="get" style="display:inline;">
+                    <button type="submit" class="create-button">Create</button>
+                </form>
+                <form action="/logout" method="post" style="display:inline;">
+                    <button type="submit" class="logout-button">Log Out</button>
+                </form>
+                {{else}}
+                <form action="/register" method="get" style="display:inline;">
+                    <button type="submit" class="register-button">Register</button>
+                </form>
+                <form action="/login" method="get" style="display:inline;">
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                {{end}}
+            </div> 
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu">
+                    <div class="menu-item">
+                        <div class="menu-icon new-icon"></div>
+                        <div class="menu-text">
+                            <div class="menu-title">Newest and Recent</div>
+                            <div class="menu-subtitle">Find the latest update</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-icon popular-icon"></div>
+                        <div class="menu-text">
+                            <div class="menu-title">Popular of the day</div>
+                            <div class="menu-subtitle">Shots featured today by curators</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-icon following-icon">
+                            <div class="following-count">24</div>
+                        </div>
+                        <div class="menu-text">
+                            <div class="menu-title">Following</div>
+                            <div class="menu-subtitle">Explore from your favorite person</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="section-title">Popular Tags</div>
+                    <div class="tag-list">
+                        <div class="tag-item">
+                            <div class="tag-icon javascript-icon"></div>
+                            <div class="tag-text">
+                                <div class="tag-title">#javascript</div>
+                                <div class="tag-subtitle">82,645 Posted by this tag</div>
+                            </div>
+                        </div>
+                        <div class="tag-item">
+                            <div class="tag-icon bitcoin-icon"></div>
+                            <div class="tag-text">
+                                <div class="tag-title">#bitcoin</div>
+                                <div class="tag-subtitle">65,523 Posted • Trending</div>
+                            </div>
+                        </div>
+                        <div class="tag-item">
+                            <div class="tag-icon design-icon"></div>
+                            <div class="tag-text">
+                                <div class="tag-title">#design</div>
+                                <div class="tag-subtitle">51,354 • Trending in Bangladesh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pinned-groups">
+                    <div class="section-title">Pinned Group</div>
+                    <div class="group-list">
+                        <div class="group-item">
+                            <img class="group-icon" src="https://via.placeholder.com/32x32" alt="Group Icon">
+                            <div class="group-text">
+                                <div class="group-title">#javascript</div>
+                                <div class="group-subtitle">82,645 Posted by this tag</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="post">
+                    <img class="post-image" src="{{.Image}}" alt="{{.Title}}" onclick="redirectToLoginPage()">
+                    <div class="post-details">
+                        <div class="post-title">{{.Title}}</div>
+                        <div class="post-tags">
+                            <span class="post-tag">finance</span>
+                            <span class="post-tag">bitcoin</span>
+                            <span class="post-tag">crypto</span>
+                        </div>
+                        <div class="post-author">
+                            <img class="author-avatar" src="https://via.placeholder.com/28x34" alt="Author Avatar">
+                            <div class="author-details">
+                                <div class="author-name">Pavel Gvay</div>
+                                <div class="author-time">3 weeks ago</div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="post-views">651,324 Views</div>
+                                <div class="post-likes" onclick="redirectToLoginPage()">36,654 Likes</div>
+                                <div class="post-comments">56 comments</div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <img class="post-action-icon" src="https://via.placeholder.com/20x18" alt="Action Icon" onclick="redirectToLoginPage()">
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="main-content">
+                <div class="post">
+                    <img class="post-image" src="https://via.placeholder.com/156x156" alt="Post Image" onclick="redirectToLoginPage()">
+                    <div class="post-details">
+                        <div class="post-title">Blockchain developer best practices on innovationchain</div>
+                        <div class="post-tags">
+                            <span class="post-tag">finance</span>
+                            <span class="post-tag">bitcoin</span>
+                            <span class="post-tag">crypto</span>
+                        </div>
+                        <div class="post-author">
+                            <img class="author-avatar" src="https://via.placeholder.com/28x34" alt="Author Avatar">
+                            <div class="author-details">
+                                <div class="author-name">Pavel Gvay</div>
+                                <div class="author-time">3 weeks ago</div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="post-views">651,324 Views</div>
+                                <div class="post-likes" onclick="redirectToLoginPage()">36,6545 Likes</div>
+                                <div class="post-comments">56 comments</div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <img class="post-action-icon" src="https://via.placeholder.com/20x18" alt="Action Icon" onclick="redirectToLoginPage()">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
