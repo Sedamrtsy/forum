@@ -1,0 +1,230 @@
+.post {
+    background-color: #3b4752;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; /* Genişlik tam viewport genişliği */
+    height: 100%; /* Yükseklik tam viewport yüksekliği */
+  }
+  
+  .post .div {
+    background-color: #3b4752;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .post .overlap {
+    position: absolute;
+    width: 1058px;
+    height: 429px;
+    top: 95px;
+    left: 192px;
+  }
+  
+  .post .group {
+    position: absolute;
+    width: 1058px;
+    height: 429px;
+    top: 0;
+    left: 0;
+  }
+  
+  .post .overlap-group {
+    position: relative;
+    width: 1056px;
+    height: 429px;
+    background-color: #2f373e;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #262d34;
+  }
+  
+  .post .vector {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    top: 22px;
+    left: 36px;
+  }
+  
+  .post .flexcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: absolute;
+    width: 453px;
+    height: 172px;
+    top: 28px;
+    left: 277px;
+  }
+  
+  .post .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    line-height: normal;
+  }
+  
+  .post .text-wrapper {
+    letter-spacing: 0.08px;
+  }
+  
+  .post .ellipse {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 7px;
+    left: 981px;
+    background-color: #e94409;
+    border-radius: 22.54px;
+  }
+  
+  .post .content-content {
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    top: 20px;
+    left: 995px;
+  }
+  
+  .post .rectangle {
+    position: absolute;
+    width: 990px;
+    height: 154px;
+    top: 251px;
+    left: 38px;
+    background-color: #3b4752;
+    border-radius: 20px;
+  }
+  
+  .post .text-wrapper-2 {
+    position: absolute;
+    width: 336px;
+    height: 59px;
+    top: 265px;
+    left: 55px;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 600;
+    color: #858ead;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    line-height: normal;
+  }
+  
+  .post .rectangle-2 {
+    position: absolute;
+    width: 1056px;
+    height: 430px;
+    top: 579px;
+    left: 192px;
+    background-color: #2f373e;
+    border-radius: 20px;
+  }
+  
+  .post .div-wrapper {
+    position: absolute;
+    width: 82px;
+    height: 33px;
+    top: 535px;
+    left: 192px;
+    background-color: #2f373e;
+    border-radius: 16px;
+  }
+  
+  .post .text-wrapper-3 {
+    position: absolute;
+    width: 45px;
+    top: 6px;
+    left: 21px;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    line-height: normal;
+  }
+  
+  .post .overlap-2 {
+    position: absolute;
+    width: 82px;
+    height: 33px;
+    top: 534px;
+    left: 307px;
+    background-color: #2f373e;
+    border-radius: 16px;
+  }
+  
+  .post .text-wrapper-4 {
+    position: absolute;
+    width: 67px;
+    top: 6px;
+    left: 10px;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    line-height: normal;
+  }
+  
+  .post .overlap-3 {
+    position: absolute;
+    width: 91px;
+    height: 33px;
+    top: 534px;
+    left: 422px;
+  }
+  
+  .post .rectangle-2 {
+    position: absolute;
+    width: 1056px;
+    height: 430px; /* Sabit yükseklik */
+    top: 579px;
+    left: 192px;
+    background-color: #2f373e;
+    border-radius: 20px;
+    overflow-y: auto;
+     /* İçerik kaydırılabilir olacak */
+    padding: 15px; /* İç boşluk ekleyerek içeriklerin kenarlara yapışmamasını sağla */
+  }
+  
+  .post .text-wrapper-5 {
+    position: absolute;
+    width: 67px;
+    top: 6px;
+    left: 24px;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    line-height: normal;
+  }
+  
+  .post .overlap-4 {
+    position: absolute;
+    width: 84px;
+    height: 33px;
+    top: 534px;
+    left: 537px;
+  }
+  
+  .post .text-wrapper-6 {
+    position: absolute;
+    width: 67px;
+    top: 6px;
+    left: 17px;
+    font-family: "Source Sans Pro", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    line-height: normal;
+  }
+  
